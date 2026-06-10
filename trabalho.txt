@@ -1,0 +1,17 @@
+Tema: Carro
+N1 - Compra do carro
+N2 - Modelo de carro
+N3 - Diagnostico mecânico
+
+N1:
+Carro(ferrari, 20).
+Carro(fiat, 5).
+write("Valor: ").
+read(Valor).
+comprar(X, valor) :- carro(X, Valor <= y).
+
+N2:
+Contador(ListaCriterios, nValidos, listaCarrosValidos)
+
+N3:
+problemas => diagnostico/solução
