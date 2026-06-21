@@ -6,12 +6,12 @@ possui_veiculo(luis, gol).
 possui_veiculo(braian, uno).
 possui_veiculo(sandro, gol).
 
-tipo_veiculo(uno, b).
-tipo_veiculo(palio, b).
-tipo_veiculo(celta, b).
-tipo_veiculo(gol, b).
-tipo_veiculo(today, a).
-tipo_veiculo(titan, a).
+modelo_veiculo(uno, b).
+modelo_veiculo(palio, b).
+modelo_veiculo(celta, b).
+modelo_veiculo(gol, b).
+modelo_veiculo(today, a).
+modelo_veiculo(titan, a).
 
 habilitacao(joao_claudio, a).
 habilitacao(joao_claudio, b).
@@ -27,11 +27,11 @@ mesmo_veiculo(Pessoa1, Pessoa2) :-
 
 pode_dirigir(Pessoa, Veiculo) :-
       once((
-            habilitacao(Pessoa, Tipo),
-            tipo_veiculo(Veiculo, Tipo)
+            habilitacao(Pessoa, Categoria),
+            modelo_veiculo(Veiculo, Categoria)
       )).
 
 fora_da_lei(Pessoa) :-     
       possui_veiculo(Pessoa, Veiculo),
-      tipo_veiculo(Veiculo, Tipo),
-      \+ (habilitacao(Pessoa, Tipo)).
+      modelo_veiculo(Veiculo, Categoria),
+      \+ (habilitacao(Pessoa, Categoria)).
